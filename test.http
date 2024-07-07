@@ -1,0 +1,5 @@
+###
+GET http://0.0.0.0:18000/hello
+
+###
+GET http://0.0.0.0:18001/helloworld

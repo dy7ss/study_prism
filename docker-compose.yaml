@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  api1:
+    image: stoplight/prism:master
+    ports:
+      - "18000:4010"
+    volumes:
+      - .:/tmp
+    command: mock -h 0.0.0.0 /tmp/api.yaml
+  api2:
+    image: stoplight/prism:master
+    ports:
+      - "18001:4010"
+    volumes:
+      - .:/tmp
+    command: mock -h 0.0.0.0 /tmp/api2.yaml
